@@ -17,7 +17,7 @@ function mergeArr(intArr1, intArr2) {
                 j++;
             }
         }
-        
+
     }
 
     while (i < intArr1.length) {

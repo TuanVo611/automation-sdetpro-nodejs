@@ -1,6 +1,6 @@
 let intArr = [12, 34, 1, 16, 28]
 
-function sortArr(intArr){
+function sortArr(intArr) {
     let temp = 0;
 
     for (let i = 0; i < intArr.length - 1; i++) {
