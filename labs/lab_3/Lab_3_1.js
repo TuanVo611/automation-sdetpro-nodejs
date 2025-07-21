@@ -4,10 +4,10 @@ let numberOfOdd = 0;
 let numberOfEven = 0;
 
 for (let index = 0; index < intArr.length; index++) {
-    if (intArr[index] == 0) {
+    if (intArr[index] === 0) {
         console.log(`Zero is not odd or even!`)
     } else {
-        if (intArr[index] % 2 == 0) {
+        if (intArr[index] % 2 === 0) {
             numberOfEven++;
         } else {
             numberOfOdd++;

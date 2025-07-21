@@ -1,7 +1,5 @@
 let intArr = [1, 2, 3, 4, 5, 6, 0];
 
-let maxValue = 0;
-
 function findMaxValue(intArr) {
     let maxValue = 0;
 
@@ -30,7 +28,7 @@ function findMinValue(intArr) {
         throw new Error("Input must be a non-empty array");
     }
 
-    for (let index = 0; index < intArr.length; index++) {
+    for (let index = 1; index < intArr.length; index++) {
         if (intArr[index] < minValue) {
             minValue = intArr[index]
         }
