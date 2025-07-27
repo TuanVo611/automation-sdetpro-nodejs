@@ -19,8 +19,6 @@ maxValue = findMaxValue(intArr);
 
 console.log(maxValue);
 
-let minValue = 0;
-
 function findMinValue(intArr) {
     let minValue = intArr[0];
 

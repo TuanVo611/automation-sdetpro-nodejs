@@ -20,7 +20,7 @@ function mergeArr(intArr1, intArr2) {
 
     }
 
-    while (i < intArr1.length) {
+    for (;i < intArr1.length; i++) {
         intResultArr.push(intArr1[i])
     }
 
