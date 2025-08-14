@@ -18,8 +18,8 @@ let userInfo = {
 }
 
 //Read | Dot Natation to get value from a property
-console.log(`User Name: ${userInfo.name}`);
-// console.log(`User Gender: ${userInfo["gender"]}`);
+// console.log(`User Name: ${userInfo.name}`);
+console.log(`User Gender: ${userInfo["gender"]}`);
 
 //Destructure
 

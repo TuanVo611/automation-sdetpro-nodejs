@@ -1,5 +1,6 @@
-//Data
+//MVC - Model(Data) View(Usage) Controller(Logic)
 
+//Data
 const teo = {
     name: "Teo",
     grades: [9, 8, 6]
@@ -34,7 +35,6 @@ function findBestStudent(studentList) {
         bestStudentName: bestStudent.name,
         avgScore: currentHighestScore,
         metaData: {
-
         }
     }
 }
@@ -47,3 +47,7 @@ function calculateAvgScore({grades }){
     }
     return Math.ceil(totalScore/grades.length)
 }
+
+// Root cause: mostly from logic! Bug/Defect
+// Debug
+// Debug mode
