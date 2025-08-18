@@ -40,13 +40,9 @@ function filterData(validateRespone, userId, postId) {
         if (Number(validateRespone[index].userId) === userId) {
             if (Number(validateRespone[index].id === postId)) {
                 console.log(`Post id: ${validateRespone[index].id}`)
-                id = validateRespone[index].id
                 console.log(`User id: ${validateRespone[index].userId}`)
-                resultUserId = validateRespone[index].userId
                 console.log(`Title: ${validateRespone[index].title}`)
-                title = validateRespone[index].title
                 console.log(`Body: ${validateRespone[index].body}`)
-                body = validateRespone[index].body
             }
         } else {
             countUserId++;
