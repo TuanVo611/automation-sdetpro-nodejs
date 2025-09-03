@@ -6,11 +6,12 @@ test(todo1Endpoint);
 
 //Logic - From Controller
 async function test(url) {
-    const response = await fetch(url);
-    const todo1Object = response.json();
     // fetch(url)
     //     .then(getResponse)
     //     .then(validateResponse)
+
+    const response = await fetch(url);
+    const todo1Object = await response.json();
 
     if (todo1Object.completed) {
         console.log('Task completed!');

@@ -4,7 +4,7 @@ const targetUrl = "https://sdetpro.com";
 
 //Callback Hell
 sendRequest(targetUrl, function (response) {
-    console.log(response)
+    // console.log(response)
     processResponse(response, function (statusCode) {
         validateResponse(statusCode);
     })

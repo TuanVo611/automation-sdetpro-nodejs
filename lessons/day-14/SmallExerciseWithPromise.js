@@ -13,7 +13,7 @@ function test(url) {
 
 //Support Functions
 function getResponse(response) {
-    //Return new Promise (function(resolve, reject)){resolve}
+    //Return new Promise (function(resolve, reject)){resolve({...})}
     return response.json();
 }
 

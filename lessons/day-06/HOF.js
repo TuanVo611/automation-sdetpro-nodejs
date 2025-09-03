@@ -5,17 +5,17 @@
  */
 
 // Difination of OTHER function
-function greet(name){
+function greet(name) {
     console.log(`Hello, ${name}`);
 }
 
-function elegantGreet(name){
+function elegantGreet(name) {
     console.log(`Hello there, ${name}`);
 }
 
 // HOF:
 // I will call you back when i need you:
-function hof(callbackFunction){
+function hof(callbackFunction) {
     // ...
     //...
     let name = "Tuan"
