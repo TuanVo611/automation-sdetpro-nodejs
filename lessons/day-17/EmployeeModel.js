@@ -1,4 +1,5 @@
 class Employee {
+
     constructor(name, salary) {
         this._name = name;
         this._salary = salary;
