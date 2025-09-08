@@ -14,17 +14,17 @@ const USER_ENDPOINT = `${BASE_URL}/users`;
 //Main function
 app();
 
-
-//Support Function
+//Support Functions
 function app() {
     let isPlaying = true;
-    while (isPlaying) {
+    while (true) {
         handlePromise();
-        console.log("See you again!")
         break;
     }
 
     function handlePromise() {
+        if (!isPlaying) return;
+
         printMenu();
         getUserOption().then(function (userOption) {
             switch (userOption) {
@@ -41,7 +41,6 @@ function app() {
             }
         }).then(handlePromise)
     }
-    console.log(`See you again!`);
 }
 
 function printMenu() {
@@ -62,11 +61,20 @@ function handleGetPostContent() {
     const userId = _getUserInput("userId: ");
     return _getAllPostForUser(userId).then(function (returnedData) {
         if (returnedData.hasUser) {
-            const postId = getUserInput("postId: ");
+            const postId = _getUserInput("postId: ");
             const targetPost = returnedData.userRelatedPosts.filter(function (post) {
                 return post.id === postId;
             })
             console.log(targetPost);
+        }
+    })
+}
+
+function handleGetAllPostContent() {
+    const userId = _getUserInput("userId: ");
+    return _getAllPostForUser(userId).then(function (returnedData) {
+        if (returnedData.hasUser) {
+            console.log(returnedData.userRelatedPosts);
         }
     })
 }
@@ -76,18 +84,19 @@ function _getAllPostForUser(userId) {
     // Check to see user is existing from DB
     return fetch(`${USER_ENDPOINT}/${userId}`)
         .then(function (userResponse) {
+            console.log(userResponse)
             const hasUser = userResponse.ok;
             if (hasUser) {
                 //Logic to get post for that user
-                const postId = getUserInput("postId: ");
+                const postId = _getUserInput("postId: ");
                 return fetch(POST_ENDPOINT).then(function (promisePostResponse) {
                     return promisePostResponse.json().then(function (postResponse) {
                         const userRelatedPosts = postResponse.filter(function (post) {
                             return post.userId === userId;
                         })
                         return {
-                            hasUser : true,
-                            userRelatedPosts : userRelatedPosts
+                            hasUser: true,
+                            userRelatedPosts: userRelatedPosts
                         }
                     })
                 })
@@ -100,5 +109,18 @@ function _getAllPostForUser(userId) {
 
 function _getUserInput(question) {
     return Number(readline.question(question));
+}
+
+async function getAllPostForUserWithAsync() {
+    const userResponse = await fetch(`${USER_ENDPOINT}/${userId}`);
+    const userData = await userResponse.json();
+    const hasUser = userData.id;
+    if(hasUser){
+        const postResponse = await fetch(POST_ENDPOINT);
+        const postData = await postResponse.json();
+        
+    } else {
+
+    }
 }
 
