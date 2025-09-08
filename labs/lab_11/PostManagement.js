@@ -14,24 +14,10 @@ async function lab11() {
     const requestHandler = new RequestHandler();
 
     // const post = ...
-    const post = new Post();
-    const targetPostList = await requestHandler.getTargetPost(userId, postId);
-    for (const targetPost of targetPostList) {
-        post.userId = targetPost.userId;
-        post.id = targetPost.id;
-        post.title = targetPost.title;
-        post.body = targetPost.body;
-    }
-
-    // console.log(post);
+    const targetPost = await requestHandler.getTargetPost(userId, postId);
+    console.log(targetPost);
 
     // const allPost = ...
-    const allPost = await requestHandler.getAllPosts(userId);
-    for (const targetPost of allPost) {
-        post.userId = targetPost.userId;
-        post.id = targetPost.id;
-        post.title = targetPost.title;
-        post.body = targetPost.body;
-    }
-    console.log(post);
+   const allPost = await requestHandler.getAllPosts(userId);
+   console.log(allPost)
 }

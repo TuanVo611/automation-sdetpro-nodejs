@@ -10,20 +10,37 @@ class RequestHandler {
 
     async getTargetPost(userId, postId) {
         const returnedData = await this._getAllPosts(userId);
+        const post = new Post();
         if (returnedData.hasUser) {
-            const targetPost = returnedData.userRelatedPosts.filter(function (post) {
+            const targetPostList = returnedData.userRelatedPosts.filter(function (post) {
                 return post.id === postId;
-            }) 
-            return targetPost;
+            })
+            for (const targetPost of targetPostList) {
+                post.userId = targetPost.userId;
+                post.id = targetPost.id;
+                post.title = targetPost.title;
+                post.body = targetPost.body;
+            }
+            return post;
         }
     }
 
     async getAllPosts(userId) {
         // Construct the returned data as a [ Post data model ] from class Post
         const returnedData = await this._getAllPosts(userId);
+        const post = new Post();
+        let arrPost = [];
         if (returnedData.hasUser) {
-            return returnedData.userRelatedPosts;
+            const allPostList = returnedData.userRelatedPosts;
+            for (const postElem of allPostList) {
+                post.userId = postElem.userId;
+                post.id = postElem.id;
+                post.title = postElem.title;
+                post.body = postElem.body;
+                arrPost.push(post)
+            }
         }
+        return arrPost;
     }
 
     async _getAllPosts(userId) {
