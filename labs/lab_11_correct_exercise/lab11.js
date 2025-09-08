@@ -1,17 +1,14 @@
-const Post = require("./Post");
-const RequestHandler = require("./RequestHandler");
+const RequestHandler = require("../lab_11/RequestHandler");
 
-// Excution
+const userId = 1;
+const postId = 5;
+const BASE_URL = "https://jsonplaceholder.typicode.com";
+
 lab11();
 
-// Function Declaration
 async function lab11() {
-    // Given params
-    const userId = 1;
-    const postId = 5;
-
     // Create RequestHandler object
-    const requestHandler = new RequestHandler();
+    const requestHandler = new RequestHandler(BASE_URL);
 
     // const post = ...
     const targetPost = await requestHandler.getTargetPost(userId, postId);
@@ -19,5 +16,5 @@ async function lab11() {
 
     // const allPost = ...
     const allPost = await requestHandler.getAllPosts(userId);
-    console.log(allPost)
+    // console.log(allPost)
 }

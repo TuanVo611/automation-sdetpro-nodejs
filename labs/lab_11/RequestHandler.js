@@ -1,7 +1,5 @@
 const Post = require("./Post");
 
-const readline = require("readline-sync");
-
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 const POST_ENDPOINT = `${BASE_URL}/posts`;
 const USER_ENDPOINT = `${BASE_URL}/users`;
