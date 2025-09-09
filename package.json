@@ -2,5 +2,8 @@
   "name": "automation-sdetpro-nodejs",
   "dependencies": {
     "readline-sync": "1.4.10"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2"
   }
 }
