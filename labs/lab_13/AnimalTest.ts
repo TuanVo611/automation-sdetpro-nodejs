@@ -1,9 +1,12 @@
 import Animal from "./Animal";
 import AnimalController from "./AnimalController";
+import Dog from "./Dog";
+import Horse from "./Horse";
+import Tiger from "./Tiger";
 
-let dog = new Animal();
-let horse = new Animal();
-let tiger = new Animal();
+let dog = new Dog();
+let horse = new Horse();
+let tiger = new Tiger();
 
 let animalController = new AnimalController();
 

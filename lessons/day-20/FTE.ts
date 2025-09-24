@@ -9,6 +9,10 @@ export default class FTE extends Employee{
         this.name = "FTE";
     }
 
+    public override setBonus(factor: number){
+        this.bonus = factor * this.workingdays / (365 - 52);
+    }
+
 }
 
 /**

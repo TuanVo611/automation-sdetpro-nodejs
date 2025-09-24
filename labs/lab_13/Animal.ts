@@ -2,7 +2,8 @@ export default class Animal{
     protected name: string = "";
     protected speed: number = 0;
     
-    constructor(){
+    constructor(maxSpeed: number){
+        this.speed = Math.floor(Math.random() * maxSpeed) + 1;
     }
 
     public getName(){
