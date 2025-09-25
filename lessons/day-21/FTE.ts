@@ -2,17 +2,16 @@ import Employee from "./Employee";
 
 // Extends: IS-A Relationship
 // Inheritance -> Design Concept and Reuse Concept
-export default class FTE extends Employee{
+export default class FTE extends Employee {
 
-    constructor(salary : number){
-        super(salary);
+    constructor(salary: number, workingDays: number) {
+        super(salary, workingDays);
         this.name = "FTE";
     }
 
-    public override setBonus(factor: number){
-        this.bonus = factor * this.workingdays / (365 - 52);
+    public override setBonus(maxBonus: number) {
+        this.bonus = maxBonus * this.workingdays / (365 - 52);
     }
-
 }
 
 /**
