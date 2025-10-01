@@ -15,8 +15,8 @@ const TARGET_NUMBER = 3;
 
 // where break will be ended up
 
-let foundIndex = findIndex(array,TARGET_NUMBER);
-if(foundIndex < 0){
+let foundIndex = findIndex(array, TARGET_NUMBER);
+if (foundIndex < 0) {
     console.log(`${TARGET_NUMBER} not found!`)
 } else {
     console.log(`Found ${TARGET_NUMBER} at index ${foundIndex}`)
@@ -29,10 +29,10 @@ if(foundIndex < 0){
  * @returns a value as index, -1 if not found
  */
 
-function findIndex (array, targetNumber){
+function findIndex(array, targetNumber) {
     for (let index = 0; index < array.length; index++) {
         const value = array[index];
-        if(value === targetNumber){
+        if (value === targetNumber) {
             return index;
         }
     }

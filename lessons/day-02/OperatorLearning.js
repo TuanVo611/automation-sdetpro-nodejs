@@ -29,7 +29,7 @@ console.log(`10/3(rounding ceiling): ${roundingCeiling}`);
 //To fixed number
 let anotherResult = 10/3
 let MAX_FLOATING_NUMBER = 2
-let toFixedNumber = anotherResult.toFixed(MAX_FLOATING_NUMBER)
+let toFixedNumber = anotherResult.toFixed(MAX_FLOATING_NUMBER);
 console.log(`10/3(to fixed number)): ${toFixedNumber}`);
 
 //square up a number

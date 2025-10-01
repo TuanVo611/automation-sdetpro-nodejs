@@ -40,12 +40,12 @@ function findBestStudent(studentList) {
 }
 
 //Support Function - DRY
-function calculateAvgScore({grades }){
+function calculateAvgScore({ grades }) {
     let totalScore = 0;
-    for(const grade of grades){
+    for (const grade of grades) {
         totalScore += grade
     }
-    return Math.ceil(totalScore/grades.length)
+    return Math.ceil(totalScore / grades.length)
 }
 
 // Root cause: mostly from logic! Bug/Defect

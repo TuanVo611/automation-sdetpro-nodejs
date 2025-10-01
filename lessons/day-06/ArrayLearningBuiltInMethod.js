@@ -13,12 +13,12 @@ function isOddNumber(value, index, array) {
     return !isEvenNumber(value, index, array)
 }
 
-// Delete | Splice
-let startIndex = 2;
-let deleteCount = 1;
-let insertValue = 10;
-let clonedArray = [...myArr]
-let returnedArr = clonedArray.splice(startIndex, deleteCount, insertValue);
-console.log(returnedArr);
-console.log(clonedArray);
-console.log(myArr)
+// // Delete | Splice
+// let startIndex = 2;
+// let deleteCount = 1;
+// let insertValue = 10;
+// let clonedArray = [...myArr]
+// let returnedArr = clonedArray.splice(startIndex, deleteCount, insertValue);
+// console.log(returnedArr);
+// console.log(clonedArray);
+// console.log(myArr)

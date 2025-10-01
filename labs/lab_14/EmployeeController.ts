@@ -9,4 +9,8 @@ export class EmployeeController {
         }
         return totalSalary;
     }
+
+    public sortSalaryASC(salary1: number, salary2: number) {
+        return salary1 - salary2;
+    }
 }
