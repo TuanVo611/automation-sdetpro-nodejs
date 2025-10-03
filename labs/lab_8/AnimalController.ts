@@ -1,6 +1,6 @@
 import Animal from "./Animal";
 
-export default class AnimalController {
+export class AnimalController {
 
     public getAnimalWinner(animalList: Animal[]): Animal {
         let animalWinner = animalList[0];

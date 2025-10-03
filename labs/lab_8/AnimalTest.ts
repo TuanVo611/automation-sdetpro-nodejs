@@ -1,5 +1,6 @@
 import Animal from "./Animal";
-import AnimalController from "./AnimalController";
+import { AnimalController } from "./AnimalController";
+
 import Dog from "./Dog";
 import Horse from "./Horse";
 import Tiger from "./Tiger";
