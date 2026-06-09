@@ -1,4 +1,4 @@
-let intArr = [1,1,1,1,1,1];
+let intArr = [1, 1, 1, 1, 1, 1];
 
 let minCurrentValue = intArr[0];
 let maxCurrentValue = intArr[0];
@@ -31,4 +31,6 @@ if (minCurrentValue === maxCurrentValue) {
     console.log(minCurrentIndexes)
     console.log(maxCurrentIndexes)
 }
+
+
 

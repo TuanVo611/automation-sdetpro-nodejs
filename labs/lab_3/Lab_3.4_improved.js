@@ -26,4 +26,3 @@ for (; barPosition < barLength; barPosition++) {
     mergedArray.push(barAraay[barPosition])
 }
 
-

@@ -1,3 +1,8 @@
-for(let number = 0; number < 5 ;number++){
+let number = 0;
+for (; number < 5; increaseNumber()) {
     console.log(number);
+}
+
+function increaseNumber() {
+    number++;
 }

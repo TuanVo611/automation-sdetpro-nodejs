@@ -2,16 +2,16 @@ let array = [1, 2, 3, 4, 5]
 
 const TARGET_NUMBER = 3;
 
-// for (let index = 0; index < array.length; index++) {
-//     const value = array[index];
-//     if(value === TARGET_NUMBER){
-//         console.log(`Found ${TARGET_NUMBER} at index ${index}`);
-//         break;
-//     }
-//     console.log(value)
-// }
+for (let index = 0; index < array.length; index++) {
+    const value = array[index];
+    if (value === TARGET_NUMBER) {
+        console.log(`Found ${TARGET_NUMBER} at index ${index}`);
+        break;
+    }
+    console.log(value)
+}
 
-// console.log(`${TARGET_NUMBER} not found`);
+console.log(`${TARGET_NUMBER} not found`);
 
 // where break will be ended up
 

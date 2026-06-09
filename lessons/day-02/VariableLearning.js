@@ -1,7 +1,7 @@
 let myName = "Tuan";
 console.log(myName)
 
-// Re-assign, Re-declare
+// Can Re-assign, Can't Re-declare
 myName = "Vo Anh Tuan"
 console.log(myName);
 

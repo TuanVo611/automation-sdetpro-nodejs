@@ -18,9 +18,9 @@ function elegantGreet(name) {
 function hof(callbackFunction) {
     // ...
     //...
-    let name = "Tuan"
-    callbackFunction(name)
+    let name = "Tuan";
+    callbackFunction(name);
 }
 
-hof(greet)
-hof(elegantGreet)
+hof(greet); 
+hof(elegantGreet);

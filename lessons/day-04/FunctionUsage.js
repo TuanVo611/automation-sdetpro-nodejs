@@ -1,9 +1,9 @@
-const Util = require("../day-04/UtilMethod.js");
+const Util = require("../utils/UtilMethod.js");
 
 //Destructure
 const { getInputFromKeyboard,
-        getUserInputNumberFuncExpresstion 
-} = require("../day-04/UtilMethod.js");
+    getUserInputNumberFuncExpresstion   
+} = require("../utils/UtilMethod.js");
 
 let userInput = getInputFromKeyboard;
 // userInput = Util.getUserInputNumber();

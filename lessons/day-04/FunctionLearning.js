@@ -12,28 +12,31 @@
  */
 
 const readLine = require("readline-sync")
+
 let userInputNumber = getUserInputNumber();
 console.log(`User Input Number: ${userInputNumber}`);
 
 // 1,2,3: arguments
-let result = addNumber(1,2,3);
+let result = addNumber(1, 2, 3);
+let result1 = addNumber(1, 2);
+let result2 = addNumber(1);
 
 //Method 01: [ Function Declaration ] | Hoisting
-function getUserInputNumber(){
+function getUserInputNumber() {
     let inputNumber = readLine.question("Your Number: ")
     return Number(inputNumber);
 };
 
 //Method 02: [ Function Expression ] | NO Hoisting
-const getUserInputNumberFuncExpresstion = function(){
+const getUserInputNumberFuncExpresstion = function () {
     let inputNumber = readLine.question("Your Number: ")
     return Number(inputNumber);
 }
 
 
 //Parameters
-function addNumber(number1, number2){
-    if(number1 && number2){
+function addNumber(number1, number2) {
+    if (number1 && number2) {
         console.log(`Number 1: ${number1}, Number 2: ${number2}`);
         return number1 + number2;
     } else {
@@ -42,6 +45,8 @@ function addNumber(number1, number2){
 }
 
 console.log(result);
+console.log(result1);
+console.log(result2);
 
 
 

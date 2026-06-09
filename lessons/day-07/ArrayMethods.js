@@ -7,14 +7,14 @@ function doubleValue(value, index, array) {
     return value * 2;
 }
 
-// console.log(`Original Array: ${array}`);
-// console.log(`Double value array: ${doubleValueArray}`);
+console.log(`Original Array: ${array}`);
+console.log(`Double value array: ${doubleValueArray}`);
 
 //SORT - string
 let strings = ['B', 'C', 'A']
 strings.sort()
 // console.log(`After sorted: ${strings}`);
-strings.reverse()
+strings.reverse() // (đảo ngược Array lại)
 // console.log(`After reversed: ${strings}`);
 
 //SORT - Number

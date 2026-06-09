@@ -2,9 +2,9 @@ const readLine = require("readline-sync");
 let inputNumber = Number(readLine.question("Input Number: "));
 
 if (Number.isNaN(inputNumber)) {
-    console.log("The input number is not a number!")
+    console.log("The input value is not a valid number")
 } else if (inputNumber === 0) {
-    console.log("Zero is not considered as even or odd number!");
+    console.log("Zero is not considered as even or odd number")
 } else {
     let evenNumber = inputNumber % 2 === 0;
     if (evenNumber) {

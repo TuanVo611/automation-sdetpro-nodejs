@@ -1,7 +1,7 @@
 let myArr = [1, 2, 3, 4, 5]
 
 //filter just even number from array
-let myEvenNumber = myArr.filter(isOddNumber)
+let myEvenNumber = myArr.filter(isEvenNumber)
 console.log(myEvenNumber);
 
 function isEvenNumber(number, index, array) {
@@ -14,11 +14,11 @@ function isOddNumber(value, index, array) {
 }
 
 // // Delete | Splice
-// let startIndex = 2;
-// let deleteCount = 1;
-// let insertValue = 10;
-// let clonedArray = [...myArr]
-// let returnedArr = clonedArray.splice(startIndex, deleteCount, insertValue);
-// console.log(returnedArr);
-// console.log(clonedArray);
-// console.log(myArr)
+let startIndex = 2;
+let deleteCount = 1;
+let insertValue = 10;
+let clonedArray = [...myArr]
+let returnedArr = clonedArray.splice(startIndex, deleteCount, insertValue);
+console.log(returnedArr);
+console.log(clonedArray);
+console.log(myArr)
