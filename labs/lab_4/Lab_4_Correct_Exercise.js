@@ -36,8 +36,8 @@ function bankApp() {
                 isInteracting = false;
                 break;
             default:
-                console.log(`Wrong Option! Attemp: ${failAttempts}`);
                 failAttempts++;
+                console.log(`Wrong Option! Attemp: ${failAttempts}`);
         }
     }
     console.log(`See you again!`);
