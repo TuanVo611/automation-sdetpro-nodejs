@@ -12,19 +12,19 @@ let userInfo = {
     }
 }
 
-// console.log(userInfo)
+console.log(userInfo)
 
 // Trying to clone data from userInfo object:
 
-// let user2Info = userInfo;
-// user2Info.userName = "Tuan Vo";
-// user2Info.userAge = 28;
-// user2Info.bankAccounts.checking.accountNumber = "2931923801";
-// user2Info.bankAccounts.savingAccount.accountNumber = "28273273";
-// console.log(userInfo)
-// console.log(user2Info)
+let user2Info = userInfo;
+user2Info.userName = "Tuan Vo";
+user2Info.userAge = 28;
+user2Info.bankAccounts.checking.accountNumber = "2931923801";
+user2Info.bankAccounts.savingAccount.accountNumber = "28273273";
+console.log(userInfo)
+console.log(user2Info)
 
-//Shallow copy using spread syntax
+// Shallow copy using spread syntax
 
 // let user2Info = { ...userInfo }
 // user2Info.userName = "Tuanvo"

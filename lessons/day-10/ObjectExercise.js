@@ -9,14 +9,15 @@ const teo = {
 
 const ti = JSON.parse(JSON.stringify(teo));
 ti.name = "Ti";
-ti.grades = [7, 9, 9];
+ti.grades = [7, 9, 10];
 
 const tun = JSON.parse(JSON.stringify(teo));
 tun.name = "Tun";
 tun.grades = [6, 7, 8];
 
 //Usage
-const bestStudentInfo = findBestStudent([teo, ti, tun]);
+const studentList = [teo, ti, tun];
+const bestStudentInfo = findBestStudent(studentList);
 const { bestStudentName, avgScore } = bestStudentInfo;
 console.log(`Best student is: ${bestStudentName} with average score: ${avgScore})`)
 
@@ -33,9 +34,7 @@ function findBestStudent(studentList) {
     }
     return {
         bestStudentName: bestStudent.name,
-        avgScore: currentHighestScore,
-        metaData: {
-        }
+        avgScore: currentHighestScore
     }
 }
 
