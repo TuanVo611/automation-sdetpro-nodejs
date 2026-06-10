@@ -40,6 +40,6 @@ function printGameMenu() {
     `)
 }
 
-function getUserOption(){
+function getUserOption() {
     return Number(readline.question(`Please select an option!`))
 }
