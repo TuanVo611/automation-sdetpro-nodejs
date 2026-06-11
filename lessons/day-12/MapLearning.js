@@ -23,6 +23,7 @@ for (const value of emergencyList.values()) {
 
 // UPDATE/ADD
 emergencyList.set('116', "Something Else");
+emergencyList.set('117', "Something Else ...");
 console.log(emergencyList);
 
 //DELETE
@@ -32,4 +33,14 @@ emergencyList.delete('116');
 console.log(`The size after: ${emergencyList.size}`)
 console.log(emergencyList);
 
+//iterator
+const iterator = emergencyList.entries();
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
 
+//Using map - built-in function
+for (const [key, value] of emergencyList){
+    console.log(`${key} : ${value}`);
+}

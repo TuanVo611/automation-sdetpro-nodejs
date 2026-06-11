@@ -20,7 +20,7 @@ let indicesWithMap = findIndicesMap(givenArray, targetNumber);
 console.log(indicesWithBruteForce);
 console.log(indicesWithMap);
 
-// Brute Force | Time Complexity: 0(n^2)
+// Brute Force | Time Complexity: 0(n^2) - nested loops
 function findIndicesBruteForce(givenArray, targetNumber) {
     for (let firstNumIndex = 0; firstNumIndex < givenArray.length - 1; firstNumIndex++) {
         const firstNum = givenArray[firstNumIndex];
@@ -35,7 +35,7 @@ function findIndicesBruteForce(givenArray, targetNumber) {
     return [];
 }
 
-//Time Complexity: 0(n)
+//Time Complexity: 0(n) - using Map Data Structure
 function findIndicesMap(givenArray, targetNumber) {
     let numMap = new Map();
     for (let firstNumIndex = 0; firstNumIndex < givenArray.length; firstNumIndex++) {
@@ -49,3 +49,18 @@ function findIndicesMap(givenArray, targetNumber) {
     }
     return [];
 }
+
+//Using Set Data Structure - Time Complexity: 0(n)
+function findIndicesSet(givenArray, targetNumber) {
+    let numSet = new Set();
+    for (let firstNumIndex = 0; firstNumIndex < givenArray.length; firstNumIndex++) {
+        const firstNum = givenArray[firstNumIndex];
+        const lookingNumber = targetNumber - firstNum;
+        if (numSet.has(lookingNumber)) {
+            return [numSet.get(lookingNumber), firstNumIndex];
+        }
+        numSet.add(firstNum);
+    }
+    return [];
+}
+
