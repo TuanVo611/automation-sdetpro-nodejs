@@ -1,5 +1,5 @@
 //Data
-const givenStr = "Sweetens Cove - Trackmam, to have both the 14 day trial flag and the Trackman Course Play flag";
+const givenStr = "Sweetens Cove - Trackmam, to have both the 14 day trial flag and the Trackman Course Play flag day have";
 
 //Using:
 let groupWordMap = groupWordsUsingMap(givenStr);
@@ -9,9 +9,9 @@ console.log(groupWordMap);
 
 function groupWordsUsingMap(givenString) {
 
-    let individualWords = givenString.replace(/,/gi, "").split(" ");
+    let individualWords = givenString.replace(/,/gi, "").split(" "); // g: global, i: insensitive, //: separator
     let wordMaps = new Map();
-    
+
     for (const word of individualWords) {
         if (wordMaps.has(word)) {
             wordMaps.set(word, wordMaps.get(word) + 1);
@@ -21,3 +21,4 @@ function groupWordsUsingMap(givenString) {
     }
     return wordMaps;
 }
+

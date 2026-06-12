@@ -8,7 +8,7 @@ function countWords(words) {
     const wordCounts = {};
 
     for (let word of words) {
-        if (wordCounts.hasOwnProperty(word)) {
+        if (wordCounts[word]) {
             wordCounts[word]++;
         } else {
             wordCounts[word] = 1;

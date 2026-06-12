@@ -49,4 +49,4 @@ function calculateAvgScore({ grades }) {
 
 // Root cause: mostly from logic! Bug/Defect
 // Debug
-// Debug mode
+// Debug mode 

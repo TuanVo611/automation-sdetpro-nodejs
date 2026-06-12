@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Automaiton Sdetpro",
             "skipFiles": [
                 "<node_internals>/**"
             ],
