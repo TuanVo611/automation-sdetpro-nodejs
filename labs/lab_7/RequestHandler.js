@@ -1,4 +1,4 @@
-const Post = require("./Post");
+import Post from "./Post";
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 const POST_ENDPOINT = `${BASE_URL}/posts`;
@@ -61,4 +61,4 @@ class RequestHandler {
         }
     }
 }
-module.exports = RequestHandler;
+export default RequestHandler;

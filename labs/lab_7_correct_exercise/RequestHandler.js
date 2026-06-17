@@ -8,7 +8,7 @@ class RequestHandler {
     async getTargetPost(targetUserId, postId) {
         const targetUserPosts = await this._getAllPosts(targetUserId);
         const targetPost = targetUserPosts.find(function (post) {
-            post.id === postId;
+            return post.id === postId;
         })
 
         if (!targetPost) {
@@ -17,7 +17,7 @@ class RequestHandler {
         }
 
         const { userId, id, title, body } = targetPost;
-        return new Post(targetUserId, id, title, body);
+        return new Post(userId, id, title, body);
     }
 
     async getAllPosts(targetUserId) {

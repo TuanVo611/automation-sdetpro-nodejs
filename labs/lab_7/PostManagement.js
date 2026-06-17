@@ -1,5 +1,5 @@
-const Post = require("./Post");
-const RequestHandler = require("./RequestHandler");
+const Post = require("./Post").default;
+const RequestHandler = require("./RequestHandler").default;
 
 // Excution
 lab11();

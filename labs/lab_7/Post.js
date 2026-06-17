@@ -23,4 +23,4 @@ class Post {
         this._body = body;
     }
 }
-module.exports = Post;
+export default Post;
