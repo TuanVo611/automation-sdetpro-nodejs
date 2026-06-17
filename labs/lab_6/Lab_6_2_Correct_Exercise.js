@@ -83,6 +83,10 @@ async function _getAllPostForUser(userId) {
         }
     } else {
         console.log(`UserID ${userId} is not existing!`);
+        return {
+            hasUser: false,
+            userRelatedPosts: []
+        }
     }
 }
 

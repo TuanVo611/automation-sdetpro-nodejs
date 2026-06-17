@@ -57,7 +57,7 @@ function getUserOption() {
     })
 }
 
-function handleGetPostContent() {
+async function handleGetPostContent() {
     const userId = _getUserInput("userId: ");
     return _getAllPostForUser(userId).then(function (returnedData) {
         if (returnedData.hasUser) {
@@ -70,7 +70,7 @@ function handleGetPostContent() {
     })
 }
 
-function handleGetAllPostContent() {
+async function handleGetAllPostContent() {
     const userId = _getUserInput("userId: ");
     return _getAllPostForUser(userId).then(function (returnedData) {
         if (returnedData.hasUser) {
@@ -80,7 +80,7 @@ function handleGetAllPostContent() {
 }
 
 //Support Function
-function _getAllPostForUser(userId) {
+async function _getAllPostForUser(userId) {
     // Check to see user is existing from DB
     return fetch(`${USER_ENDPOINT}/${userId}`)
         .then(function (userResponse) {
@@ -115,12 +115,14 @@ async function getAllPostForUserWithAsync() {
     const userResponse = await fetch(`${USER_ENDPOINT}/${userId}`);
     const userData = await userResponse.json();
     const hasUser = userData.id;
-    if(hasUser){
+    if (hasUser) {
         const postResponse = await fetch(POST_ENDPOINT);
-        const postData = await postResponse.json();
-        
+        // const postData = await postResponse.json();
     } else {
-
+        return {
+            hasUser: false,
+            userRelatedPosts: []
+        }
     }
 }
 

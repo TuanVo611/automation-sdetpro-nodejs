@@ -25,4 +25,3 @@ function askTeo() {
     console.log("2. Tèo ơi uống cf không?")
 }
 
-
