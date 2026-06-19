@@ -21,6 +21,6 @@ class Person {
         return this._age;
     }
 }
-module.exports = Person;
+export default Person;
 
 

@@ -1,4 +1,4 @@
-const Person = require("./Person");
+import Person from "./Person.js";
 
 class BonusManagement {
     getEligibleMoneyAmount(person) {
@@ -10,6 +10,7 @@ class BonusManagement {
     }
 }
 
-let teo = new Person("Teo", 18);
-const money = new BonusManagement().getEligibleMoneyAmount(teo);
+let teo = new Person("Teo", 600);
+const money = new BonusManagement().getEligibleMoneyAmount(600);
+
 console.log(money);
