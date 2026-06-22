@@ -1,11 +1,11 @@
-import UseApi from "./UseApi";
+import UserApi from "./UserApi";
 
 
 main();
 
 async function main() {
     const baseUrl = ""
-    const userApiHandler = new UseApi(baseUrl);
+    const userApiHandler = new UserApi(baseUrl);
 
     //Get all user
     const allUsers : any[] = await userApiHandler.getUser();
@@ -19,3 +19,4 @@ async function main() {
     const userCreationResponse = await userApiHandler.createUser(user);
     console.log(userCreationResponse);
 }
+

@@ -10,6 +10,6 @@ export class SalaryController {
     }
 
     private calculateSalary(employee: Employee): number {
-        return employee.getSalary() * 1.1;
+        return employee.getSalary() * 1.1 + employee.getBonus() * 0.9;
     }
 }
