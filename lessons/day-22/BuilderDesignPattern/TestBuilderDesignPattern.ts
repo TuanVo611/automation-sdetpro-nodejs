@@ -1,9 +1,9 @@
 import House from "./HouseWithBuilderDesignPattern";
 
-let builder = new House.Builder();
-builder.setTopRoofColor("Red");
-builder.setWindowNumber(4);
-builder.setColor("Blue");
-builder.setMainDoorNumber(1);
-let myHouse : House = builder.build();
+let myHouse: House = new House.Builder()
+    .setTopRoofColor("Red")
+    .setWindowNumber(4)
+    .setColor("Blue")
+    .setMainDoorNumber(1)
+    .build();
 console.log((myHouse));

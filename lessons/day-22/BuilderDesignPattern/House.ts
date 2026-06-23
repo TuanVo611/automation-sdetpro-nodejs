@@ -10,7 +10,4 @@ export default class House {
         this.color = color;
         this.mainDoorNumber = mainDoorNumber;
     }
-
-    
-
 }

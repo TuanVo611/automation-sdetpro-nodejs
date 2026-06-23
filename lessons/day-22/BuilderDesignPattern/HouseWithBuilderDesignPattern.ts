@@ -4,8 +4,6 @@
 // Contract --> Sign: Immutable: WRITE-ONLY
 // Builder: READ-ONLY
 
-import { main } from "appium";
-
 export default class HouseWithBuilder {
     private topRoofColor: string = "";
     private windowNumber: number = 1;
@@ -37,18 +35,22 @@ export default class HouseWithBuilder {
 
         public setTopRoofColor(topRoofColor: string) {
             this.house.topRoofColor = topRoofColor;
+            return this;
         }
 
         public setWindowNumber(windowNumber: number) {
             this.house.windowNumber = windowNumber;
+            return this;
         }
 
         public setColor(color: string) {
             this.house.color = color;
+            return this;
         }
 
         public setMainDoorNumber(mainDoorNumber: number) {
             this.house.mainDoorNumber = mainDoorNumber;
+            return this;
         }
 
         //Sign the contract:
