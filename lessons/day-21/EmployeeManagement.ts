@@ -10,7 +10,7 @@ const employee1 = new PTE(20000, 250)
 
 console.log(`Employee1's bonus: ${employee1.getBonus()}`)
 
-const employee2 = new FTE(19000,250)
+const employee2 = new FTE(19000, 250)
 console.log(`Employee2's bonus: ${employee2.getBonus()}`)
 
 // Construct Employee Controller

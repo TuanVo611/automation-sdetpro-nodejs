@@ -20,10 +20,7 @@ export default class FTE extends Employee {
 }
 
 /**
- * 
- * 
  * GET POST PUT DELETE PATCH -> Reuse
  * BaseReqHandler / FP
  * GETReqHandler extends BaseReqHandler
- * 
  */
